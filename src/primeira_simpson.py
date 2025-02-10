@@ -34,7 +34,7 @@ def main() -> None:
     print(f"Resultado da integral (Simpson 1/3): {resultado}")
     print(f"Tempo de execução: {tempo_exec:.6f} segundos")
 
-    output_filename: str = "tempo_saida.csv"
+    output_filename: str = "dataset/tempo_saida.csv"
     with open(output_filename, "w", newline="") as outfile:
         writer = csv.writer(outfile)
         writer.writerow(["Tempo de Execução (s)"])
