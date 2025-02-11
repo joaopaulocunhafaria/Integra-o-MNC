@@ -16,6 +16,7 @@ def simpson1_3_array(valores: List[float], h: float) -> float:
         else:
             soma += 4 * valores[i]
 
+    print("Soma: ", soma)
     integral: float = (h / 3) * soma
     return integral
 
@@ -33,7 +34,15 @@ def main() -> None:
     n: int = len(valores) - 1
     h: float = (b - a) / n   
 
+    start_time = time.time()
     resultado: float = simpson1_3_array(valores, h)
+    elapsed_time = time.time() - start_time
+    
+    
+
+    with open("datasets/output/tempo_saida.csv", "a", newline="") as outfile:
+        writer = csv.writer(outfile)
+        writer.writerow(["Primeira Simpson ", elapsed_time, resultado])        
 
     print(f"Resultado da integral (Simpson 1/3): {resultado}")
     

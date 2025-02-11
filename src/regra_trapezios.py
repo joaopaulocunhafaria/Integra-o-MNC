@@ -28,7 +28,16 @@ def main() -> None:
     n: int = len(valores) - 1
     h: float = (b - a) / n   
 
+    start_time = time.time()
+    
     resultado: float = trapezio_array(valores, h)
+    
+    elapsed_time = time.time() - start_time
+    
+    with open("datasets/output/tempo_saida.csv", "a", newline="") as outfile:
+        writer = csv.writer(outfile)
+        writer.writerow(["Regra do trapezio ", elapsed_time, resultado])   
+        
     
     print(f"Resultado da integral (Regra do Trapézio): {resultado}")
 

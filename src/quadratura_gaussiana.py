@@ -46,8 +46,17 @@ def main():
     b = float(args[1])
     valores = [float(x) for x in args[2:]]
 
+    start_time = time.time()
+    
     resultado = quadratura_gaussiana(a, b, valores)
+    
+    elapsed_time = time.time() - start_time
 
+
+    with open("datasets/output/tempo_saida.csv", "a", newline="") as outfile:
+        writer = csv.writer(outfile)
+        writer.writerow(["Quadratura Gaussiana ", elapsed_time, resultado])   
+        
     print(f"Resultado da integral (Quadratura Gaussiana, 5 pontos da Tabela 5.16): {resultado}")
 
 if __name__ == "__main__":

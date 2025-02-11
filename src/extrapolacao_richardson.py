@@ -48,11 +48,22 @@ def main():
     valores_interpolados.append(valores[-1])
 
     # Cálculo das integrais usando Simpson 1/3
+    start_time = time.time()
     I1 = simpson_1_3_array(valores, h1)
     I2 = simpson_1_3_array(valores_interpolados, h2)
-
-    # Aplicação da Extrapolação de Richardson
+    
     resultado = richar(I1, I2, N1, N2)
+    
+    elapsed_time = time.time() - start_time
+    
+    # Aplicação da Extrapolação de Richardson
+    
+    
+    
+    with open("datasets/output/tempo_saida.csv", "a", newline="") as outfile:
+        writer = csv.writer(outfile)
+        writer.writerow(["Extrapolação Richarlison ", elapsed_time, resultado])   
+        
     print(f"Resultado da integral (Extrapolação de Richardson): {resultado}")
 
 

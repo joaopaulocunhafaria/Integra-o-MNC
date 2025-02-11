@@ -32,10 +32,18 @@ def main() -> None:
     valores = [float(x) for x in args[2:]]
 
     n: int = len(valores) - 1
-    h: float = (b - a) / n   
+    h: float = (b - a) / n 
 
+    start_time = time.time()
     resultado: float = simpson3_8_array(valores, h)
+    elapsed_time = time.time() - start_time
 
+    with open("datasets/output/tempo_saida.csv", "a", newline="") as outfile:
+        writer = csv.writer(outfile)
+        writer.writerow(["Segunda Simpson ", elapsed_time, resultado])   
+        
+        
+    print(f"Valor do h: {h}")
     print(f"Resultado da integral (Simpson 3/8): {resultado}")
 
 if __name__ == "__main__":

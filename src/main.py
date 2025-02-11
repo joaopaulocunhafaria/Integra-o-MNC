@@ -37,23 +37,18 @@ def executar_todos_os_metodos(input_filename: str):
         # Iniciando a contagem do tempo
         start_time = time.time()
         # Passando os valores como argumentos para cada script
-        os.system(f"python {script} {a} {b} {valores_str}")
+        os.system(f"python3 {script} {a} {b} {valores_str}")
         # Calculando o tempo de execução
         elapsed_time = time.time() - start_time
         print(f"Tempo de execução: {elapsed_time:.6f} segundos")
-
-        # Escrevendo o tempo de execução no arquivo de saída
-        with open(output_filename, "a", newline="") as outfile:
-            writer = csv.writer(outfile)
-            writer.writerow([nome, elapsed_time])
-
+ 
 
 if __name__ == "__main__":
     # criar um arquivo de saída
     output_filename = "datasets/output/tempo_saida.csv"
-    with open(output_filename, "w", newline="") as outfile:
+    with open(output_filename, "a", newline="") as outfile:
         writer = csv.writer(outfile)
-        writer.writerow(["Método", "Tempo de execução (s)"])
+        writer.writerow(["Método", "Tempo de execução (s)", "Resultado"])
 
 
     input_filename = "datasets/input/entrada.csv"  # Caminho do arquivo de entrada

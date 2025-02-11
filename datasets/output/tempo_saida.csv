@@ -1,6 +1,6 @@
-Método,Tempo de execução (s)
-regra_trapezios,0.025119543075561523
-primeira_simpson,0.020249366760253906
-segunda_simpson,0.019876718521118164
-quadratura_gaussiana,0.027189016342163086
-extrapolacao_richardson,0.02245354652404785
+Método,Tempo de execução (s),Resultado
+Regra do trapezio ,4.0531158447265625e-06,636.3000000000001
+Primeira Simpson ,3.504753112792969e-05,1237.8
+Segunda Simpson ,6.4373016357421875e-06,999.675
+Quadratura Gaussiana ,1.2874603271484375e-05,1262.2573839158713
+Extrapolação Richarlison ,7.152557373046875e-06,1233.64
