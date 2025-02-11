@@ -1,6 +1,23 @@
+Problema de calcular a area de flutuação de um navio 
 Método,Tempo de execução (s),Resultado
-Regra do trapezio ,4.0531158447265625e-06,636.3000000000001
-Primeira Simpson ,3.504753112792969e-05,1237.8
-Segunda Simpson ,6.4373016357421875e-06,999.675
-Quadratura Gaussiana ,1.2874603271484375e-05,1262.2573839158713
-Extrapolação Richarlison ,7.152557373046875e-06,1233.64
+Regra do trapezio ,3.5762786865234375e-06,636.3000000000001
+Primeira Simpson ,3.457069396972656e-05,1237.8
+Segunda Simpson ,5.4836273193359375e-06,999.675
+Quadratura Gaussiana ,1.621246337890625e-05,1262.2573839158713
+Extrapolação Richarlison ,1.2636184692382812e-05,1233.64
+
+Problema do canteiro de flores irregular
+Método,Tempo de execução (s),Resultado
+Regra do trapezio ,5.245208740234375e-06,5.25
+Primeira Simpson ,3.695487976074219e-05,11.0
+Segunda Simpson ,6.198883056640625e-06,10.6875
+Quadratura Gaussiana ,1.3828277587890625e-05,10.856173622968617
+Extrapolação Richarlison ,7.152557373046875e-06,10.466666666666667
+ 
+Problema de calcular o volume do sino
+Método,Tempo de execução (s),Resultado
+Regra do trapezio ,7.62939453125e-06,101.7924888982149
+Primeira Simpson ,4.410743713378906e-05,139.35462730159588
+Segunda Simpson ,1.5020370483398438e-05,180.97270144710143
+Quadratura Gaussiana ,3.886222839355469e-05,181.2529534933424
+Extrapolação Richarlison ,1.8596649169921875e-05,184.03743910885606
