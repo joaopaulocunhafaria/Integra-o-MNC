@@ -18,14 +18,21 @@ def simpson1_3_array(valores: List[float], h: float) -> float:
     return integral
 
 def main() -> None:
-    input_filename: str = "dataset/input.csv"
+    input_filename: str = "dataset/primeira_simpson_input.csv"
     
     with open(input_filename, "r") as infile:
         line: str = infile.readline().strip()
-        valores: List[float] = [float(x) for x in line.split(",") if x.strip() != '']
+        parts: List[str] = [x.strip() for x in line.split(",") if x.strip() != '']
+        if len(parts) < 3:
+            raise ValueError("O arquivo de entrada deve conter pelo menos 3 números: 2 para os limites e 1 ou mais para os valores da função.")
+        
+        a: float = float(parts[0])
+        b: float = float(parts[1])
+        valores: List[float] = [float(x) for x in parts[2:]]
     
-    h: float = float(input("Digite o valor de h (passo): "))
-    
+    n: int = len(valores) - 1
+    h: float = (b - a) / n
+
     inicio: float = time.perf_counter()
     resultado: float = simpson1_3_array(valores, h)
     fim: float = time.perf_counter()
