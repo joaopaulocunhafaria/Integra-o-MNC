@@ -14,10 +14,34 @@ Segunda Simpson ,6.198883056640625e-06,10.6875
 Quadratura Gaussiana ,1.3828277587890625e-05,10.856173622968617
 Extrapolação Richarlison ,7.152557373046875e-06,10.466666666666667
  
-Problema de calcular o volume do sino
+Problema de calcular o volume do sino com 9 subdivisões
 Método,Tempo de execução (s),Resultado
 Regra do trapezio ,7.62939453125e-06,101.7924888982149
 Primeira Simpson ,4.410743713378906e-05,139.35462730159588
 Segunda Simpson ,1.5020370483398438e-05,180.97270144710143
 Quadratura Gaussiana ,3.886222839355469e-05,181.2529534933424
 Extrapolação Richarlison ,1.8596649169921875e-05,184.03743910885606
+
+Problema de calcular o volume do sino com 18 subdivisões
+Método,Tempo de execução (s),Resultado
+Regra do trapezio ,9.5367431640625e-06,96.09984379131615
+Primeira Simpson ,5.555152893066406e-05,180.95779159352506
+Segunda Simpson ,1.3113021850585938e-05,180.9587978368995
+Quadratura Gaussiana ,3.170967102050781e-05,181.00028319244734
+Extrapolação Richarlison ,2.1457672119140625e-05,181.0343662882915
+
+Problema de calcular o volume do sino com 27 subdivisões
+Método,Tempo de execução (s),Resultado
+Regra do trapezio ,1.0728836059570312e-05,94.21779905165246
+Primeira Simpson ,4.982948303222656e-05,166.40648035894003
+Segunda Simpson ,1.4543533325195312e-05,180.95684911928288
+Quadratura Gaussiana ,2.9087066650390625e-05,180.9896432594084
+Extrapolação Richarlison ,2.8133392333984375e-05,181.9610186016306
+
+Problema de calcular o volume do sino com 891 subdivisões
+Método,Tempo de execução (s),Resultado
+Regra do trapezio ,5.7220458984375e-05,90.59071351008987
+Primeira Simpson ,0.00014472007751464844,180.50473604822736
+Segunda Simpson ,0.00011014938354492188,180.95573702485083
+Quadratura Gaussiana ,2.7894973754882812e-05,180.95224610134315
+Extrapolação Richarlison ,0.0003445148468017578,180.98583710463447
